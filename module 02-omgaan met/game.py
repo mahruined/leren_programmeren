@@ -1,26 +1,11 @@
 import sys
 import time
-starttext = 'thats the spirit!!\n'+\
-'now first things first let me give you a debrief of the situation real quick\n'+\
-'the monster we are hunting today is called a Rathalos. Rathalos are large, bipedal wyverns with a spiny, armored hide covering their body.\n'+\
-'Rathalos also possess a flame sac which is used to produce deadly flaming projectiles from the mouth. The talons upon their feet are highly poisonous and are known to inflict toxic mortal wounds on larger prey.\n'+\
-'so you better be carefull not to get hit by any of those. it lives in the very depths of the acient forest fiercely protecting its territory,\n'
+import text
 def print_delay(string):
     for char in string:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.00)
-health = 100
-attackdamage = 10
-health2 = 200
-attackdamage2 = 60
-enemyhealth = 20
-enemyattackdamage = 5
-rathalosHP = 120
-rathalosHP2 = 120
-rathalosDMG = 50
-heal =  + 5
-heal2 = + 50
 print('''welcome to 
  _   _                                                     _     _ 
 | | | |                                                   | |   | |
@@ -33,7 +18,7 @@ print_delay ('''this is the new world a place where monsters roam the lands free
 print_delay ('its a dangerous world out there are you sure you can do this (y/n)\n ')
 start = input ()
 if start == ('y'):
-    print_delay(starttext)
+    text.intro()
     name = input('how rude of me ive never aske you for your name, mind if you tell me hunter\n')
     print_delay (f'ah {name}!! that name sounds like the name of a solid hunter. now off you go hunter\n')
 else:

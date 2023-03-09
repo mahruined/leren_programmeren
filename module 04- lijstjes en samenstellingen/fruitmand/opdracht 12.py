@@ -1,5 +1,4 @@
 from fruitmand import fruitmand
-list = []
 max_lengte= 0
 for index in range(0,len(fruitmand)):
     lengte_naam= len(fruitmand[index]['name'])

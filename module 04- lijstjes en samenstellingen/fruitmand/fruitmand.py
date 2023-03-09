@@ -1,3 +1,4 @@
+from random import shuffle
 fruitmand = [{
     'name' : 'ananas',
     'weight' : 1590,
@@ -10,6 +11,11 @@ fruitmand = [{
     'round' : True
 },{
     'name' : 'sinaasappel',
+    'weight' : 130,
+    'color' : 'orange',
+    'round' : True
+},{
+    'name' : 'delangstefruitindezelijst',
     'weight' : 130,
     'color' : 'orange',
     'round' : True
@@ -34,3 +40,4 @@ fruitmand = [{
     'color' : 'yellow',
     'round' : True
 }]
+shuffle(fruitmand)

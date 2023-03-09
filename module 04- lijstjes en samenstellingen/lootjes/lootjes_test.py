@@ -1,7 +1,7 @@
 import random
 
 participants = []
-
+ASKTHRESHHOLD = 3
 
 loop = True
 while loop:
@@ -10,7 +10,7 @@ while loop:
         print('name already entered')
     else:
         participants.append(name)
-        if len(participants) >2:
+        if len(participants) >= ASKTHRESHHOLD:
             another_name = input('do you want to enter another participant? ').lower()
             if another_name in ('nee','n','no'):
                 loop = False
@@ -18,10 +18,12 @@ while loop:
 partners = []
 random.shuffle(participants)
 len_participants = len(participants)
-for name in participants:
-    index = (participants.index(name) +1 )% len_participants
+for number in range (len_participants):
+    index = (number +1 )% len_participants
+    # print(index)
     partners.append(participants[index])
+    # print(partners)
 
 
 for i in range(len(partners)):
-    print(participants[i], "drawed", partners[i])
+    print(participants[i], "drew", partners[i])
